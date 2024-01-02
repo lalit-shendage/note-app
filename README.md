@@ -76,7 +76,7 @@ npm start
 #### POST note
 
 ```http
-  POST /notes
+  POST /notes/create
 ```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
