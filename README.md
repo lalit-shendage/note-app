@@ -125,7 +125,7 @@ npm start
 | `Content`      | `string` |  min 6 characters |
 
 
-#### get result
+#### Delete note
 ```http
   DELETE /notes/:id
 ```
