@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "e0c831cb-b315-4e53-9af3-381c3cba7000",
+		"name": "note taking app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26585164"
+	},
+	"item": [
+		{
+			"name": "notes",
+			"item": [
+				{
+					"name": "create note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkyYTg5ZmEzNWIwNWI2YWE0OGNmNDYiLCJpYXQiOjE3MDQxMTA2MDMsImV4cCI6MTcwNDExNDIwM30.-2seH3ZeWcQFpZka6YATeND1SwXVSvd9QyBbfP6qbE4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"note 2\",\r\n  \"content\":\"this is sample note 2\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/notes/create"
+					},
+					"response": []
+				},
+				{
+					"name": "get all note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkyYTg5ZmEzNWIwNWI2YWE0OGNmNDYiLCJpYXQiOjE3MDQxMTA2MDMsImV4cCI6MTcwNDExNDIwM30.-2seH3ZeWcQFpZka6YATeND1SwXVSvd9QyBbfP6qbE4",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/notes/"
+					},
+					"response": []
+				},
+				{
+					"name": "get note by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkyYTg5ZmEzNWIwNWI2YWE0OGNmNDYiLCJpYXQiOjE3MDQxMTA2MDMsImV4cCI6MTcwNDExNDIwM30.-2seH3ZeWcQFpZka6YATeND1SwXVSvd9QyBbfP6qbE4",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/notes/6592aa457274b8b972a5cabc"
+					},
+					"response": []
+				},
+				{
+					"name": "update note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkyYTg5ZmEzNWIwNWI2YWE0OGNmNDYiLCJpYXQiOjE3MDQxMTA2MDMsImV4cCI6MTcwNDExNDIwM30.-2seH3ZeWcQFpZka6YATeND1SwXVSvd9QyBbfP6qbE4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"note 2 updated\",\r\n  \"content\":\"this is updated content in note 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/notes/update/6592aa457274b8b972a5cabc"
+					},
+					"response": []
+				},
+				{
+					"name": "delete note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTkyYTg5ZmEzNWIwNWI2YWE0OGNmNDYiLCJpYXQiOjE3MDQxMTA2MDMsImV4cCI6MTcwNDExNDIwM30.-2seH3ZeWcQFpZka6YATeND1SwXVSvd9QyBbfP6qbE4",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/notes/delete/6592aa457274b8b972a5cabc"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user\",\r\n  \"email\": \"user1@gmail.com\",\r\n  \"password\": \"12345678\"\r\n}\r\n"
+						},
+						"url": "http://localhost:5000/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@gmail.com\",\r\n    \"password\":\"12345678A\"\r\n}"
+						},
+						"url": "http://localhost:5000/auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
